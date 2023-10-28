@@ -5,6 +5,10 @@ import (
 	"log"
 )
 
+type CommandData struct {
+	Offset int `json:"offset"`
+}
+
 func (c *Commander) Default(inputMessage *tgbotapi.Message) {
 	log.Printf("[%s] %s", inputMessage.From.UserName, inputMessage.Text)
 
